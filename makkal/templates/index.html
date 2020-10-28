@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+<head><title>hello</title>
+<link rel="stylesheet" type="text/css" href="{% static 'first.css' %}"></head>
+
+<body><!--</body>>{%for temp in data%}
+    <h1>{{temp.name}}</h1>
+    <h2>{{temp.password}}</h2>
+    {%endfor%}
+    <h1>GAME START</h1>!-->
+    <form action="" method="POST">
+        {% csrf_token %}
+    <label>username</label>
+    <input type="text" name="name">
+    <label>password</label>
+    <input type="password" name="password">
+    <button type="submit">GO</button>
+</form>
+</body>
+</html>
